@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:layout_marginTop="20dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Wydarzenie w Sudetach"
+        android:textSize="28sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="@color/black"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:src="@drawable/widok"
+        android:scaleType="fitXY"
+        android:padding="-10dp"/>
+
+    <TextView
+        android:id="@+id/Likes"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="0 polubień"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:gravity="right"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/Like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#aaabfa"
+            android:text="Polub"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/Delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#aaabfa"
+            android:text="Usuń"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/Email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:inputType="text"
+        android:minHeight="48dp" />
+
+    <EditText
+        android:id="@+id/Password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Haslo"
+        android:inputType="textPassword"
+        android:minHeight="48dp" />
+
+
+    <EditText
+        android:id="@+id/Password2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Powtórz hasło"
+        android:inputType="textPassword"
+        android:minHeight="48dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:id="@+id/Confirm"
+        android:text="Zaloguj sie" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:id="@+id/CheckUser"
+        android:text="Zobacz użytkownika" />
+
+    <TextView
+        android:id="@+id/Notifications"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Obszar komunikatów"
+        android:layout_gravity="center" />
+</LinearLayout>
