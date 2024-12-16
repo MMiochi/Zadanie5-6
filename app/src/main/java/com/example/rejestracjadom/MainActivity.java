@@ -1,7 +1,6 @@
 package com.example.rejestracjadom;
 
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -19,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText confirmPasswordEditText;
     private TextView notificationTextView;
     private int likeCount = 0;
+    private String loggedInEmail = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,12 +35,13 @@ public class MainActivity extends AppCompatActivity {
         deleteButton = findViewById(R.id.Delete);
         likesTextView = findViewById(R.id.Likes);
 
-
         likeButton.setOnClickListener(v -> incrementLikes());
 
         deleteButton.setOnClickListener(v -> decrementLikes());
 
         confirmButton.setOnClickListener(v -> confirmUser());
+
+        checkUserButton.setOnClickListener(v -> checkUser());
     }
 
     private void confirmUser() {
@@ -53,7 +54,16 @@ public class MainActivity extends AppCompatActivity {
         } else if (!password.equals(confirmPassword)) {
             notificationTextView.setText("Hasła się różnią");
         } else {
-            notificationTextView.setText("Witaj " + email);
+            loggedInEmail = email;
+            notificationTextView.setText("Zalogowano jako " + email);
+        }
+    }
+
+    private void checkUser() {
+        if (loggedInEmail.isEmpty()) {
+            notificationTextView.setText("Nie jesteś zalogowany");
+        } else {
+            notificationTextView.setText("Zalogowany użytkownik: " + loggedInEmail);
         }
     }
 

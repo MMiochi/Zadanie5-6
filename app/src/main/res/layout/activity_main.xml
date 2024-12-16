@@ -11,6 +11,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:padding="10dp"
         android:text="Wydarzenie w Sudetach"
         android:textSize="28sp"
         android:gravity="center"
@@ -27,7 +28,8 @@
     <TextView
         android:id="@+id/Likes"
         android:layout_width="match_parent"
-        android:layout_height="30dp"
+        android:layout_height="40dp"
+        android:padding="8dp"
         android:text="0 polubień"
         android:textSize="18sp"
         android:textColor="@color/black"
